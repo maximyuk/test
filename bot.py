@@ -6,7 +6,7 @@ from handlers import questions, different_types
 
 # Запуск бота
 async def main():
-    bot = Bot(token="5606002386:AAGd4L0woGYsgh4q2nCZP6z-0Be99YSsUjs")
+    bot = Bot(token="5606002386:AAHX8IVf4K7Mr7U89Gjjp0W75Rm4QQr1O9w")
     dp = Dispatcher()
 
     dp.include_routers(questions.router, different_types.router)
