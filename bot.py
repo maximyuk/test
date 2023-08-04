@@ -1,22 +1,18 @@
-
 import asyncio
 from aiogram import Bot, Dispatcher
-from handlers import questions, different_types
-
+from handlers import *
 
 # Запуск бота
 async def main():
-    bot = Bot(token="5606002386:AAHX8IVf4K7Mr7U89Gjjp0W75Rm4QQr1O9w")
+    bot = Bot(token="5579393510:AAFTu9JVaAd9IyujIkX3wN7NfkCHhJYAxdk")
     dp = Dispatcher()
 
-    dp.include_routers(questions.router, different_types.router)
+    dp.include_routers(menu.router)
 
-    # Альтернативный вариант регистрации роутеров по одному на строку
-    # dp.include_router(questions.router)
-    # dp.include_router(different_types.router)
 
-    # Запускаем бота и пропускаем все накопленные входящие
-    # Да, этот метод можно вызвать даже если у вас поллинг
+
+
+
     await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)
 
