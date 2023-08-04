@@ -43,6 +43,26 @@ async def menu_inline() -> InlineKeyboardMarkup:
 
 
 
+# Функція для того щоб повертатись назад та ховати повідомлення
+async def nation_kb() -> InlineKeyboardMarkup:
+    builder = InlineKeyboardBuilder()
+
+    builder.add(InlineKeyboardButton(text="Україна 🇺🇦", callback_data="Україна 🇺🇦"))
+    builder.add(InlineKeyboardButton(text="Польща 🇵🇱", callback_data="Польща 🇵🇱"))
+    builder.add(InlineKeyboardButton(text="Німечинна 🇩🇪", callback_data="Німечинна 🇩🇪"))
+    builder.add(InlineKeyboardButton(text="Чехія 🇨🇿", callback_data="Чехія 🇨🇿"))
+    builder.add(InlineKeyboardButton(text="Японія 🇯🇵", callback_data="Японія 🇯🇵"))
+    builder.add(InlineKeyboardButton(text="Китай 🇨🇳", callback_data="Китай 🇨🇳"))
+    builder.add(InlineKeyboardButton(text="Румунія 🇷🇴", callback_data="Румунія 🇷🇴"))
+    builder.add(InlineKeyboardButton(text="Молдова 🇲🇩", callback_data="Молдова 🇲🇩"))
+    builder.add(InlineKeyboardButton(text="⬅️ Назад", callback_data="⬅️ Назад"))
+    builder.add(InlineKeyboardButton(text="Сховати ❌", callback_data="Сховати ❌"))
+
+    return builder.adjust(2).as_markup()
+
+
+
+
 
 
 

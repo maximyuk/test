@@ -4,10 +4,10 @@ from handlers import *
 
 # Запуск бота
 async def main():
-    bot = Bot(token="SECRET")
+    bot = Bot(token="5579393510:AAFTu9JVaAd9IyujIkX3wN7NfkCHhJYAxdk")
     dp = Dispatcher()
 
-    dp.include_routers(menu.router)
+    dp.include_routers(menu.router, nation.router)
 
 
 
