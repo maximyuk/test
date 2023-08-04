@@ -6,29 +6,33 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 
 
 
+# Создаєм кнопки для дефолд кнопок в меню
 def menu() -> ReplyKeyboardMarkup:
     kb = ReplyKeyboardBuilder()
-    kb.button(text="Про бота📎")
-    kb.button(text="Допомога🛠")
-    kb.button(text="Розробка🧩")
-    kb.button(text="Статистика🧮")
-    kb.button(text="Стікери👨‍👩‍👧‍👦")
+    kb.button(text="Рецепти страв🍳")
+    kb.button(text="Пошук страви🍴")
+    kb.button(text="Національні страви🚩")
+    kb.button(text="Запропонувати страву🤔")
+    kb.button(text="Каталог страв📖")
     kb.button(text="Донат🫡")
     kb.adjust(2)
     return kb.as_markup(resize_keyboard=True)
 
 
+
+
+# Создаєм інлайн кнопки для меню
 async def menu_inline() -> InlineKeyboardMarkup:
     builder = InlineKeyboardBuilder()
 
     keyboard = [
-        "Про бота 🖇",
-        "Розробка 🧩",
-        "Статистика 🧮",
-        "Допомога 🛠",
-        "Стікери 👨‍👩‍👧‍👦",
-        "Сховати ❌",
+        "Рецепти страв🍳",
+        "Пошук страви🍴",
+        "Національні страви🚩",
+        "Каталог страв📖",
+        "Запропонувати страву🤔",
         "Донат 🫡",
+        "Сховати ❌",
     ]
 
     for button in keyboard:
